@@ -1,0 +1,59 @@
+﻿@model ApiFutbol.Models.Jugador
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h1 class="text-light">Información Jugador</h1>
+    <hr />
+    <section class="d-flex">
+            <dl class="row text-light fs-5">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.NombreJugador)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.NombreJugador)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.PaisJugador)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PaisJugador)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.FechaNacimiento)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.FechaNacimiento)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.IdEquipoNavigation)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.IdEquipoNavigation.NombreEquipo)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.IdPosicionNavigation)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.IdPosicionNavigation.NombrePosicion)
+                </dd>
+                <a asp-action="Index">Volver a la Lista</a>
+            </dl>
+            <div class="w-75">
+                <img class="col-sm-10" src="@Html.DisplayFor(model => model.Imagen)" />
+            </div>
+    </section>
+</div>
+</body>
+</html>

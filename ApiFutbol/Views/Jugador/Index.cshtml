@@ -1,0 +1,145 @@
+﻿@model IEnumerable<ApiFutbol.Models.Jugador>
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1 class="text-light pb-4">Jugadores</h1>
+    
+
+    <!-- Filtros -->
+    <form asp-action="Index" method="get" class="mb-3">
+        <div class="row">
+            <div class="col-md-3">
+                <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="@ViewData["Nombre"]" />
+            </div>
+            <div class="col-md-3">
+                <input type="text" name="pais" class="form-control" placeholder="País" value="@ViewData["Pais"]" />
+            </div>
+            <div class="col-md-3">
+                <input type="text" name="equipo" class="form-control" placeholder="Equipo" value="@ViewData["Equipo"]" />
+            </div>
+            <div class="col-md-3">
+                <input type="text" name="posicion" class="form-control" placeholder="Posición" value="@ViewData["Posicion"]" />
+            </div>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary mt-2">Buscar</button>
+        </div>
+    </form>
+    
+    <p>
+        <a asp-action="Create" class="btn btn-success">Crear Nuevo</a>
+    </p>
+
+    <table class="table table-striped text-light">
+        <thead>
+            <tr class="text-center">
+                <th>
+                    <a asp-action="Index" asp-route-nombre="@ViewData["Nombre"]" asp-route-pais="@ViewData["Pais"]" asp-route-equipo="@ViewData["Equipo"]" asp-route-posicion="@ViewData["Posicion"]" asp-route-sortOrder="Nombre" asp-route-sortDirection="@((ViewData["SortOrder"] == "Nombre" && ViewData["SortDirection"] == "asc") ? "desc" : "asc")">
+                        Nombre
+                        @if (ViewData["SortOrder"] == "Nombre")
+                        {
+                            <i class="fa @((ViewData["SortDirection"] == "asc") ? "fa-sort-up" : "fa-sort-down")"></i>
+                        }
+                        else
+                        {
+                            <i class="fa fa-sort"></i>
+                        }
+                    </a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-nombre="@ViewData["Nombre"]" asp-route-pais="@ViewData["Pais"]" asp-route-equipo="@ViewData["Equipo"]" asp-route-posicion="@ViewData["Posicion"]" asp-route-sortOrder="Pais" asp-route-sortDirection="@((ViewData["SortOrder"] == "Pais" && ViewData["SortDirection"] == "asc") ? "desc" : "asc")">
+                        País
+                        @if (ViewData["SortOrder"] == "Pais")
+                        {
+                            <i class="fa @((ViewData["SortDirection"] == "asc") ? "fa-sort-up" : "fa-sort-down")"></i>
+                        }
+                        else
+                        {
+                            <i class="fa fa-sort"></i>
+                        }
+                    </a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-nombre="@ViewData["Nombre"]" asp-route-pais="@ViewData["Pais"]" asp-route-equipo="@ViewData["Equipo"]" asp-route-posicion="@ViewData["Posicion"]" asp-route-sortOrder="FechaNacimiento" asp-route-sortDirection="@((ViewData["SortOrder"] == "FechaNacimiento" && ViewData["SortDirection"] == "asc") ? "desc" : "asc")">
+                        Fecha Nacimiento
+                        @if (ViewData["SortOrder"] == "FechaNacimiento")
+                        {
+                            <i class="fa @((ViewData["SortDirection"] == "asc") ? "fa-sort-up" : "fa-sort-down")"></i>
+                        }
+                        else
+                        {
+                            <i class="fa fa-sort"></i>
+                        }
+                    </a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-nombre="@ViewData["Nombre"]" asp-route-pais="@ViewData["Pais"]" asp-route-equipo="@ViewData["Equipo"]" asp-route-posicion="@ViewData["Posicion"]" asp-route-sortOrder="Equipo" asp-route-sortDirection="@((ViewData["SortOrder"] == "Equipo" && ViewData["SortDirection"] == "asc") ? "desc" : "asc")">
+                        Equipo
+                        @if (ViewData["SortOrder"] == "Equipo")
+                        {
+                            <i class="fa @((ViewData["SortDirection"] == "asc") ? "fa-sort-up" : "fa-sort-down")"></i>
+                        }
+                        else
+                        {
+                            <i class="fa fa-sort"></i>
+                        }
+                    </a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-nombre="@ViewData["Nombre"]" asp-route-pais="@ViewData["Pais"]" asp-route-equipo="@ViewData["Equipo"]" asp-route-posicion="@ViewData["Posicion"]" asp-route-sortOrder="Posicion" asp-route-sortDirection="@((ViewData["SortOrder"] == "Posicion" && ViewData["SortDirection"] == "asc") ? "desc" : "asc")">
+                        Posición
+                        @if (ViewData["SortOrder"] == "Posicion")
+                        {
+                            <i class="fa @((ViewData["SortDirection"] == "asc") ? "fa-sort-up" : "fa-sort-down")"></i>
+                        }
+                        else
+                        {
+                            <i class="fa fa-sort"></i>
+                        }
+                    </a>
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr class="text-light text-center">
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreJugador)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaisJugador)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaNacimiento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdEquipoNavigation.NombreEquipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdPosicionNavigation.NombrePosicion)
+                </td>
+                <td>
+                    <a class="btn btn-info btn-sm text-white fw-bold px-3" asp-action="Edit" asp-route-id="@item.IdJugador">Editar</a> |
+                    <a class="btn btn-secondary btn-sm text-white fw-bold" asp-action="Details" asp-route-id="@item.IdJugador">Detalles</a> |
+                    <a class="btn btn-danger btn-sm text-white fw-bold" asp-action="Delete" asp-route-id="@item.IdJugador">Eliminar</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+    <div>
+        <a asp-action="Index">Volver a la Lista</a>
+    </div>
+</body>
+</html>

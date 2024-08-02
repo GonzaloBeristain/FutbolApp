@@ -1,0 +1,59 @@
+﻿@model ApiFutbol.Models.Jugador
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+
+<h3 class="text-light">Estás seguro que deseas eliminar a este jugador?</h3>
+<div>
+    <hr />
+    <dl class="row text-light">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreJugador)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreJugador)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PaisJugador)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PaisJugador)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaNacimiento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdEquipoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdEquipoNavigation.NombreEquipo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdPosicionNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdPosicionNavigation.NombrePosicion)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete" class="d-flex flex-column">
+        <input type="hidden" asp-for="IdJugador" />
+        <input type="submit" value="Delete" class="btn btn-danger w-25" /> |
+        <a asp-action="Index">Volver a la lista</a>
+    </form>
+</div>
+</body>
+</html>

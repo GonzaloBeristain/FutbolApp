@@ -1,0 +1,47 @@
+﻿@model ApiFutbol.Models.Equipo
+
+@{
+    Layout = "_LAYOUT";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+<h1 class="text-light">Estás seguro de que quieres eliminar este equipo?</h1>
+<div>
+    <hr />
+    <dl class="row text-light">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreEquipo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreEquipo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PaisEquipo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PaisEquipo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdLigaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdLigaNavigation.NombreLiga)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete" class="pb-2">
+        <input type="hidden" asp-for="IdEquipo" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        
+    </form>
+    <a asp-action="Index">Volver a la Lista</a>
+</div>
+</body>
+</html>

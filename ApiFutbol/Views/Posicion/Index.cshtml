@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ApiFutbol.Models.Posicion>
+
+@{
+    Layout = "_LAYOUT";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1 class="text-light pb-4">Posiciones</h1>
+    <p>
+        <a asp-action="Create" class="btn btn-success">Crear Nuevo</a>
+    </p>
+        <table class="table text-light">
+        <thead class="text-center">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NombrePosicion)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombrePosicion)
+                </td>
+                <td>
+                    <a class="btn btn-info btn-sm text-white fw-bold px-3" asp-action="Edit" asp-route-id="@item.IdPosicion">Editar</a> |
+                    <a class="btn btn-secondary btn-sm text-white fw-bold" asp-action="Details" asp-route-id="@item.IdPosicion">Detalles</a> |
+                    <a class="btn btn-danger btn-sm text-white fw-bold" asp-action="Delete" asp-route-id="@item.IdPosicion">Eliminar</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+</body>
+</html>
