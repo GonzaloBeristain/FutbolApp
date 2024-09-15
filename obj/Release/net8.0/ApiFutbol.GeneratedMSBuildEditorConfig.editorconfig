@@ -1,0 +1,139 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ApiFutbol
+build_property.RootNamespace = ApiFutbol
+build_property.ProjectDir = E:\Documentos\Programación\.NET\ASP\ApiFutbol\ApiFutbol\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\Documentos\Programación\.NET\ASP\ApiFutbol\ApiFutbol
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Equipo/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Equipo/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBvXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Equipo/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBvXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Equipo/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Equipo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Jugador/Card.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVnYWRvclxDYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Jugador/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVnYWRvclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Jugador/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVnYWRvclxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Jugador/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVnYWRvclxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Jugador/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVnYWRvclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Jugador/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVnYWRvclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Liga/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlnYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Liga/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlnYVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Liga/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlnYVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Liga/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlnYVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Liga/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlnYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Posicion/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zaWNpb25cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Posicion/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zaWNpb25cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Posicion/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zaWNpb25cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Posicion/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zaWNpb25cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Posicion/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zaWNpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documentos/Programación/.NET/ASP/ApiFutbol/ApiFutbol/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-9722ny8uw3

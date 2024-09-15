@@ -1,0 +1,50 @@
+﻿@model ApiFutbol.Models.Equipo
+
+@{
+    Layout = "_LAYOUT";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <h1 class="text-light">Agregar Equipo</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-4 text-light">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="NombreEquipo" class="control-label"></label>
+                    <input asp-for="NombreEquipo" class="form-control" placeholder="Escribe el nombre del equipo" />
+                    <span asp-validation-for="NombreEquipo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PaisEquipo" class="control-label"></label>
+                    <input asp-for="PaisEquipo" class="form-control" placeholder="Escriba el nombre del país del equipo" />
+                    <span asp-validation-for="PaisEquipo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IdLiga" class="control-label">Liga</label>
+                    <select asp-for="IdLiga" class ="form-control" asp-items="ViewBag.IdLiga">
+                        <option value="" selected disabled>Seleccione una liga</option>
+                    </select>
+                </div>
+                <div class="form-group pt-2">
+                    <input type="submit" value="Crear" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-action="Index">Volver a la lista</a>
+    </div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

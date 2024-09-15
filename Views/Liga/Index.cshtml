@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ApiFutbol.Models.Liga>
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1 class="text-light pb-4">Ligas</h1>
+    <p>
+        <a asp-action="Create" class="btn btn-success">Crear Nuevo</a>
+    </p>
+
+    <table class="table text-light">
+        <thead>
+            <tr class="text-center">
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    País
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr class="text-center">
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreLiga)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaisLiga)
+                </td>
+                <td>
+                    <a class="btn btn-info btn-sm text-white fw-bold px-3" asp-action="Edit" asp-route-id="@item.IdLiga">Editar</a> |
+                    <a class="btn btn-secondary btn-sm text-white fw-bold" asp-action="Details" asp-route-id="@item.IdLiga">Detalles</a> |
+                    <a class="btn btn-danger btn-sm text-white fw-bold" asp-action="Delete" asp-route-id="@item.IdLiga">Eliminar</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+</body>
+</html>

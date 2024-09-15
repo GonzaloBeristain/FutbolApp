@@ -1,0 +1,39 @@
+﻿@model ApiFutbol.Models.Liga
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h1 class="text-light">Liga</h1>
+        <hr />
+        <section>
+            <div>
+                    <dl class="row text-light">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.NombreLiga)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.NombreLiga)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.PaisLiga)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.PaisLiga)
+                        </dd>
+                        <a asp-action="Index">Volver a la lista</a>
+                    </dl>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

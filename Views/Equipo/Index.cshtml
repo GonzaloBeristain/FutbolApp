@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ApiFutbol.Models.Equipo>
+
+@{
+    Layout = "_LAYOUT";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1 class="text-light pb-4">Equipos</h1>
+    <p>
+        <a asp-action="Create" class="btn btn-success">Crear Nuevo</a>
+    </p>
+    <table class="table text-light">
+        <thead>
+            <tr class="text-center">
+                <th>
+                    @Html.DisplayNameFor(model => model.NombreEquipo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PaisEquipo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdLigaNavigation)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+                <tr class="text-center">
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreEquipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaisEquipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdLigaNavigation.NombreLiga)
+                </td>
+                <td>
+                    <a class="btn btn-info btn-sm text-white fw-bold px-3" asp-action="Edit" asp-route-id="@item.IdEquipo">Editar</a> |
+                    <a class="btn btn-secondary btn-sm text-white fw-bold" asp-action="Details" asp-route-id="@item.IdEquipo">Detalles</a> |
+                    <a class="btn btn-danger btn-sm text-white fw-bold" asp-action="Delete" asp-route-id="@item.IdEquipo">Eliminar</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+</body>
+</html>

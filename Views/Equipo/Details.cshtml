@@ -1,0 +1,43 @@
+﻿@model ApiFutbol.Models.Equipo
+
+@{
+    Layout = "_LAYOUT";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h1 class="text-light">Equipo</h1>
+        <hr />
+        <dl class="row text-light">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.NombreEquipo)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.NombreEquipo)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.PaisEquipo)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.PaisEquipo)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.IdLigaNavigation)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.IdLigaNavigation.NombreLiga)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Index">Volver a la Lista</a>
+    </div>
+</body>
+</html>

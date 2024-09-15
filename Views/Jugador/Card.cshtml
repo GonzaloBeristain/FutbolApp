@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ApiFutbol.Models.Jugador>
+
+@{
+    Layout = "_LAYOUT";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tarjeta</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-light">Tarjetas de Jugadores</h1>
+        <div class="row">
+            @foreach (var jugador in Model)
+            {
+                <div class="col-md-3 mb-4">
+                    <div class="card shadow">
+                        <img src="@jugador.Imagen" class="card-img-top" alt="Imagen del jugador" style="height: 200px; object-fit: cover;" />
+                        <div class="card-body bg-secondary text-light">
+                            <h5 class="card-title">@jugador.NombreJugador</h5>
+                            <p class="card-text">
+                                <strong>País:</strong> @jugador.PaisJugador <br />
+                                <strong>Fecha de Nacimiento:</strong> @jugador.FechaNacimiento.ToShortDateString() <br />
+                                <strong>Equipo:</strong> @jugador.IdEquipoNavigation.NombreEquipo <br />
+                                <strong>Posición:</strong> @jugador.IdPosicionNavigation.NombrePosicion
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Enlace para regresar a la vista de índice de jugadores -->
+    <a asp-action="Index">Volver a la Lista</a>
+</body>
+</html>

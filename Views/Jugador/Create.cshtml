@@ -1,0 +1,69 @@
+﻿@model ApiFutbol.Models.Jugador
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+<h1 class="text-light">Agregar Jugador</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4 text-light">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NombreJugador" class="control-label">Nombre</label>
+                <input asp-for="NombreJugador" class="form-control" type="text" placeholder="Escriba el nombre del jugador" />
+                <span asp-validation-for="NombreJugador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaisJugador" class="control-label">País</label>
+                    <input asp-for="PaisJugador" class="form-control" type="text" placeholder="Escriba el país del jugador" />
+                <span asp-validation-for="PaisJugador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdPosicion" class="control-label">Posición</label>
+                <select asp-for="IdPosicion" class ="form-control" asp-items="ViewBag.IdPosicion">
+                        <option value="" selected disabled>Seleccione una posición</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdEquipo" class="control-label">Equipo</label>
+                <select asp-for="IdEquipo" class ="form-control" asp-items="ViewBag.IdEquipo">
+                        <option value="" selected disabled>Seleccione un equipo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaNacimiento" class="control-label">Fecha de Nacimiento</label>
+                    <input asp-for="FechaNacimiento" class="form-control" type="text" placeholder="Escriba la fecha de nacimiento del jugador" />
+                <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imagen" class="control-label">Imagen</label>
+                    <input asp-for="Imagen" class="form-control" type="text" placeholder="Agregue la URL de la imagen" />
+                <span asp-validation-for="Imagen" class="text-danger"></span>
+            </div>
+            <div class="form-group py-2">
+                    <input type="submit" value="Crear" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

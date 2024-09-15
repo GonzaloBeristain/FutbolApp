@@ -1,0 +1,43 @@
+﻿@model ApiFutbol.Models.Posicion
+
+@{
+    Layout = "_LAYOUT";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h1 class="text-light">Editar Posicion</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4 text-light">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdPosicion" />
+            <div class="form-group">
+                <label asp-for="NombrePosicion" class="control-label"></label>
+                <input asp-for="NombrePosicion" class="form-control" />
+                <span asp-validation-for="NombrePosicion" class="text-danger"></span>
+            </div>
+            <div class="form-group py-2">
+                <input type="submit" value="Editar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>
